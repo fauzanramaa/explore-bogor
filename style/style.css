@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Amaranth&family=Bree+Serif&family=Bricolage+Grotesque:opsz@12..96&family=Caveat&family=Concert+One&family=Elsie&family=Lobster+Two&family=Metal&family=Neuton&family=PT+Serif&family=Petrona&family=Young+Serif&display=swap");
+
+/* header navbar */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  margin-right: 92px;
+}
+
+nav h1 {
+  color: black;
+  font-family: "Lobster Two", cursive;
+  font-size: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul li a {
+  font-family: "Concert One", cursive;
+  color: black;
+  font-size: larger;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: darkgray;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/*main*/
+
+/* Homepage */
+
+#homepage {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10em;
+  padding-bottom: 50px;
+}
+
+.home1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px;
+}
+
+.home1 h2 {
+  font-size: 7em;
+  font-family: "Bree Serif", serif;
+}
+
+.home1 h3 {
+  font-size: 2em;
+  font-family: "Metal", cursive;
+}
+
+.home1 p {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: "Caveat", cursive;
+}
+
+.home2 {
+  text-align: center;
+  color: #fff;
+  margin: 40px;
+  margin-right: 10em;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* PageSejarah */
+
+#sejarah {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #fffaf2;
+}
+
+.contentSejarah {
+  display: flex;
+  max-height: 752px;
+}
+
+.imgSejarah {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.textSejarah {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  padding: 5em;
+}
+
+.textSejarah h2 {
+  font-family: "Elsie", cursive;
+  font-size: 3em;
+  text-shadow: 2px 3px 2px rgba(255, 255, 255, 1);
+}
+
+.textSejarah p {
+  font-size: 1.2vw;
+  font-family: "Petrona", serif;
+}
+
+.first::first-letter {
+  font-size: 3em;
+  font-weight: bold;
+  color: sienna;
+}
+
+/* Page Geografis */
+
+#geografis {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-top: 2em;
+  padding-bottom: 50px;
+}
+
+.judulGeo {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 3em;
+  padding: 1.5em;
+}
+
+.contentGeo {
+  display: flex;
+  gap: 50px;
+}
+
+.textGeo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding-left: 50px;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+}
+
+.textGeo ul {
+  margin-left: 20px;
+}
+
+.textGeo a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  font-size: small;
+}
+
+.imgGeo img {
+  width: 500px;
+  margin-right: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+}
+
+/* Page Wisata */
+
+.judulWisata {
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  background-color: #fffbf4;
+}
+
+.judulWisata h2 {
+  font-family: "Acme", sans-serif;
+  font-size: 6em;
+}
+
+.judulWisata h3 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 3em;
+  margin-left: 12px;
+}
+
+.judulWisata h3 span {
+  color: green;
+}
+
+.wisata1 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 5em;
+}
+
+.contentWisata1 {
+  display: flex;
+  gap: 10em;
+  margin-bottom: 5em;
+}
+
+.judulwisata1 {
+  font-family: "Young Serif", serif;
+  font-size: 3em;
+}
+
+.deskripsiwisata1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 5em;
+}
+
+.deskripsiwisata1 p {
+  font-family: "Neuton", serif;
+  font-size: larger;
+}
+
+.imgWisata1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgWisata1 img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.wisata2 {
+  padding-top: 3em;
+  padding-bottom: 5em;
+}
+
+.deskripsiwisata2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3em;
+  gap: 30px;
+}
+
+.deskripsiwisata2 h3 {
+  font-family: "Young Serif", serif;
+  font-size: 3em;
+}
+
+.deskripsiwisata2 p {
+  font-family: "Neuton", serif;
+  font-size: larger;
+}
+
+.imgwisata2 {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgwisata2 #arah {
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.imgwisata2 #rusa {
+  border-radius: 5px;
+  width: 600px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: antiquewhite;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*Navbar*/
+
+  header {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: max-height 0.3s ease;
+    gap: 24px;
+  }
+
+  nav ul.active {
+    display: flex;
+    max-height: 600px;
+    transition: max-height 0.3s ease;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* Efek hover pada daftar navbar pada lebar kecil (600px) */
+  nav ul li:hover a {
+    transform: scale(1.5);
+    opacity: 0.2;
+    filter: blur(5px);
+  }
+
+  nav ul li a:hover {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  nav ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darkgray;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+  }
+
+  nav ul li a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  /*homepage*/
+  #homepage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 5em;
+  }
+
+  .home1 {
+    justify-content: center;
+    padding-top: 0em;
+    text-align: center;
+  }
+
+  .home1 h2 {
+    text-align: center;
+    font-size: 5em;
+    font-family: "Bree Serif", serif;
+  }
+
+  .home1 h3 {
+    font-size: 1.5em;
+    font-family: "Metal", cursive;
+  }
+
+  .home1 p {
+    margin: 0;
+    font-size: 1em;
+    font-family: "Caveat", cursive;
+  }
+
+  .home2 {
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .home2 img {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  /*Page Sejarah*/
+
+  .contentSejarah {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgSejarah img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .textSejarah {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    background-size: auto;
+    background-color: antiquewhite;
+  }
+
+  .textSejarah h2 {
+    margin-top: 0;
+  }
+
+  .textSejarah p {
+    font-size: medium;
+  }
+
+  /* Geografis */
+  #geografis {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 25em;
+    padding-bottom: 50px;
+  }
+
+  .judulGeo {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .contentGeo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .textGeo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Serif", serif;
+    font-size: 15px;
+    padding-left: 0;
+    padding: 20px;
+  }
+
+  .imgGeo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgGeo img {
+    width: 350px;
+    margin-right: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+  }
+
+  /* wisata */
+  .judulWisata {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffbf4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .judulWisata h3 {
+    font-family: "Amaranth", sans-serif;
+    font-size: 3em;
+    margin-left: 0px;
+  }
+
+  .wisata1 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2em;
+  }
+
+  .contentWisata1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 5em;
+  }
+
+  .judulwisata1 {
+    font-family: "Young Serif", serif;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .imgwisata2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgwisata2 #arah {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .imgwisata2 #rusa {
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+}
